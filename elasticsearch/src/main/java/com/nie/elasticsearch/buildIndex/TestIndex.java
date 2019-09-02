@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.elasticsearch.jest.JestProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.io.IOException;
@@ -30,7 +29,6 @@ public class TestIndex {
     public static final String INDEX = "es-article";
     public static final String TYPE = "articles";
 
-    @Bean(initMethod = "init")
     public InitMethodBean index(){
         System.out.println("=====================zcy=============================");
         return new InitMethodBean();
